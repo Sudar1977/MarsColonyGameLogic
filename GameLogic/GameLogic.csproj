@@ -53,6 +53,7 @@
     <Compile Include="Commands\MapCreate.cs" />
     <Compile Include="Commands\BuildingConstruct.cs" />
     <Compile Include="Core.cs" />
+    <Compile Include="Pleer\ResourceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
