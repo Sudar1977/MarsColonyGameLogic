@@ -4,12 +4,9 @@ namespace GameLogic.Architecture
 	{
 		Empty,
 		Buildings,
-		Landscape,
-		Resources,
+		LandscapeFeatures,
+		DepositsResource,
 		Rovers,
-
-
 		PowerPlant //рудимент старого кода нужно убрать
-
 	}
 }
