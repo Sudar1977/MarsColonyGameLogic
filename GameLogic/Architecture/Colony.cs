@@ -9,20 +9,19 @@ namespace GameLogic.Architecture
 		// каждая комната является пристанищем для строения
 		public Map Map { get; set; }
 
+		public Colony (int index)
+		{
+			Index = index;
+			// и по-умолчанию - это пустое строение
+			Map = new Map(MapType.Empty);
+			//создадим карты???
+		}
+
 		// Добавим по несколько карт в одну колонию различного типа
 		private readonly Dictionary<MapType, Map> maps = new Dictionary<MapType, Map>();
 		public IEnumerable<Map> Maps
 		{
 			get { return maps.Values; }
-		}
-
-		public Colony (int index)
-		{
-			Index = index;
-
-			// и по-умолчанию - это пустое строение
-			Map = new Map(MapType.Empty);
-			//создадим карты
 		}
 
 		public Map GetMap(MapType type)
@@ -36,7 +35,5 @@ namespace GameLogic.Architecture
 		{
 			maps[type] = map;
 		}
-
-
 	}
 }

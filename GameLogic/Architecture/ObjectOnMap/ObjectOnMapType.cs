@@ -1,9 +1,9 @@
 namespace GameLogic.Architecture
 {
-	public enum BuildingType
+	public enum ObjectOnMapType
 	{
 		Generator,//это было
-		//строения
+		//строения Buildings
 		AutominerMetallOre,
 		AutominerRareEarthOre,
 		MiningComplex,
@@ -20,13 +20,13 @@ namespace GameLogic.Architecture
 		ElectrrolysSmelter,
 		ChemicalLaboratory,
 		PolymerSyntesis,
-		//марсоходы
+		//марсоходы Rover
 		RoverOnMetallOre,
 		RoverOnRareEarthOre,
-		//залежи ресурсов
-		DepositsIce,
-		DepositsMetallOre,
-		DepositsRareEarthOre
+		//залежи ресурсов DepositRecources
+		DepositIce,
+		DepositMetallOre,
+		DepositRareEarthOre
 
 	}
 }

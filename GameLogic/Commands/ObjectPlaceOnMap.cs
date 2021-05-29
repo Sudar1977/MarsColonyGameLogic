@@ -2,13 +2,13 @@ using GameLogic.Architecture;
 
 namespace GameLogic.Commands
 {
-	public class BuildingConstruct : Command
+	public class ObjectPlaceOnMap : Command
 	{
 		public readonly Map Building;
-		public readonly Building Module;
+		public readonly ObjectOnMap Module;
 		public readonly int Position;
 
-		public BuildingConstruct (Map building, Building module, int position)
+		public ObjectPlaceOnMap (Map building, ObjectOnMap module, int position)
 		{
 			Building = building;
 			Module = module;
@@ -21,15 +21,15 @@ namespace GameLogic.Commands
 				return false;
 			}
 
-			if (Position < 0 || Position >= Building.BuildingLimit) {
+			if (Position < 0 || Position >= Building.ObjectsOnMapLimit) {
 				return false;
 			}
 
-			if (Building.GetBuilding(Position) != null) {
+			if (Building.GetObjectonMap(Position) != null) {
 				return false;
 			}
 
-			Building.SetBuilding(Position, Module);
+			Building.SetObjectonMap(Position, Module);
 			return true;
 		}
 	}

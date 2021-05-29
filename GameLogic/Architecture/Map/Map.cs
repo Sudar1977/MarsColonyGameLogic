@@ -6,12 +6,12 @@ namespace GameLogic.Architecture
 	public class Map
 	{
 		// Ограничим количество модулей, которые можно поставить в строение
-		public readonly int BuildingLimit = 1000000;
+		public readonly int ObjectsOnMapLimit = 1000000;
 
 		public readonly MapType Type;
 
 		// Каждое здание имеет свою сообтвенную позицию
-		private readonly Dictionary<int, Building> buildings = new Dictionary<int, Building>();
+		private readonly Dictionary<int, ObjectOnMap> objectsOnMap = new Dictionary<int, ObjectOnMap>();
 		//В статье позиция здания-модуля закодирована одним числом position 
 		//у нас же на карте нужны две координаты x, y. 
 		//Пока для простоты пусть координата будет закодирована 1,10,100, 
@@ -20,8 +20,8 @@ namespace GameLogic.Architecture
 		//(x, y) = (517, 62) position=517062 
 		//(x, y) = (1,999) position=001999   
 		//Впоследствии можно будет закодировать массивом int[] из двух элементов.
-		public IEnumerable<Building> Builings {
-			get { return buildings.Values; }
+		public IEnumerable<ObjectOnMap> ObjectsOnMap {
+			get { return objectsOnMap.Values; }
 		}
 
 		public Map (MapType type)
@@ -29,22 +29,22 @@ namespace GameLogic.Architecture
 			Type = type;
 		}
 
-		public Building GetBuilding (int position)
+		public ObjectOnMap GetObjectonMap (int position)
 		{
-			return buildings.ContainsKey(position)
-				? buildings[position]
+			return objectsOnMap.ContainsKey(position)
+				? objectsOnMap[position]
 				: null;
 		}
 
-		public void SetBuilding (int position, Building building)
+		public void SetObjectonMap (int position, ObjectOnMap objectOnMap)
 		{
-			if (position < 0 || position >= BuildingLimit) {
+			if (position < 0 || position >= ObjectsOnMapLimit) {
 				throw new IndexOutOfRangeException(
-					"Position " + position + " is out of range [0:" + BuildingLimit + "]"
+					"Position " + position + " is out of range [0:" + ObjectsOnMapLimit + "]"
 				);
 			}
 
-			buildings[position] = building;
+			objectsOnMap[position] = objectOnMap;
 		}
 	}
 }

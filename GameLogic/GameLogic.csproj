@@ -43,15 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Architecture\Map.cs" />
-    <Compile Include="Architecture\MapType.cs" />
-    <Compile Include="Architecture\Building.cs" />
-    <Compile Include="Architecture\BuildingType.cs" />
+    <Compile Include="Architecture\Map\MapConfig.cs" />
+    <Compile Include="Architecture\Map\Map.cs" />
+    <Compile Include="Architecture\Map\MapType.cs" />
+    <Compile Include="Architecture\ObjectOnMap\ObjectOnMap.cs" />
+    <Compile Include="Architecture\ObjectOnMap\ObjectOnMapConfig.cs" />
+    <Compile Include="Architecture\ObjectOnMap\ObjectOnMapType.cs" />
     <Compile Include="Architecture\Colony.cs" />
     <Compile Include="Architecture\Mars.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Commands\MapCreate.cs" />
-    <Compile Include="Commands\BuildingConstruct.cs" />
+    <Compile Include="Commands\ObjectPlaceOnMap.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Pleer\ResourceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

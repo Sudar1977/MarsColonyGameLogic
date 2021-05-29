@@ -16,7 +16,7 @@ namespace LogicTests
 			var colony = core.Mars.GetColony(0);
 
 			Assert.AreEqual(MapType.Empty, colony.Map.Type);
-			Assert.AreEqual(0, colony.Map.Builings.Count());
+			Assert.AreEqual(0, colony.Map.ObjectsOnMap.Count());
 
 			Assert.IsTrue(
 				new MapCreate(
@@ -28,12 +28,12 @@ namespace LogicTests
 			);
 
 			Assert.AreEqual(MapType.PowerPlant, colony.Map.Type);
-			Assert.AreEqual(0, colony.Map.Builings.Count());
+			Assert.AreEqual(0, colony.Map.ObjectsOnMap.Count());
 
 			Assert.IsTrue(
-				new BuildingConstruct(
+				new ObjectPlaceOnMap(
 					colony.Map,
-					new Building(BuildingType.Generator),
+					new ObjectOnMap(ObjectOnMapType.Generator),
 					2
 				)
 				.Execute(core)
@@ -41,8 +41,8 @@ namespace LogicTests
 			);
 
 			Assert.AreEqual(MapType.PowerPlant, colony.Map.Type);
-			Assert.AreEqual(BuildingType.Generator, colony.Map.GetBuilding(2).Type);
-			Assert.AreEqual(1, colony.Map.Builings.Count());
+			Assert.AreEqual(ObjectOnMapType.Generator, colony.Map.GetObjectonMap(2).Type);
+			Assert.AreEqual(1, colony.Map.ObjectsOnMap.Count());
 		}
 
 		[TestMethod]
@@ -61,9 +61,9 @@ namespace LogicTests
 			);
 
 			Assert.IsFalse(
-				new BuildingConstruct(
+				new ObjectPlaceOnMap(
 					colony.Map,
-					new Building(BuildingType.Generator),
+					new ObjectOnMap(ObjectOnMapType.Generator),
 					2
 				)
 				.Execute(core)
@@ -86,9 +86,9 @@ namespace LogicTests
 			);
 
 			Assert.IsFalse(
-				new BuildingConstruct(
+				new ObjectPlaceOnMap(
 					colony.Map,
-					new Building(BuildingType.Generator),
+					new ObjectOnMap(ObjectOnMapType.Generator),
 					1000001
 				)
 				.Execute(core)
