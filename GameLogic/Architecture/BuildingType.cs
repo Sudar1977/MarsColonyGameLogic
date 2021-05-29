@@ -2,12 +2,13 @@ namespace GameLogic.Architecture
 {
 	public enum BuildingType
 	{
-		Generator,
+		Generator,//это было
+		//строения
 		AutominerMetallOre,
 		AutominerRareEarthOre,
 		MiningComplex,
 		ConcentratingFactory,
-		Solar_panel,
+		SolarPanel,
 		NuclearPlant,
 		HeatGenerator,
 		WaterRig,
@@ -17,8 +18,15 @@ namespace GameLogic.Architecture
 		HydroponicsVegetableRawProduction,
 		VacuumSmelter,
 		ElectrrolysSmelter,
-		ChemicalLab,
-		PolymerSyntesis
+		ChemicalLaboratory,
+		PolymerSyntesis,
+		//марсоходы
+		RoverOnMetallOre,
+		RoverOnRareEarthOre,
+		//залежи ресурсов
+		DepositsIce,
+		DepositsMetallOre,
+		DepositsRareEarthOre
 
 	}
 }

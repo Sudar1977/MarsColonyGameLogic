@@ -7,8 +7,8 @@ namespace GаameLogic.Pleer
     public enum ResourceType
     {
         //Energy,
-        Ore,
-        Metal,
+        Ore,//это было
+        Metal,//это было
 
         Time,
         Rover,

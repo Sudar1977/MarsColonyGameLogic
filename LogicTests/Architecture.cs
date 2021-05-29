@@ -49,11 +49,11 @@ namespace LogicTests
 		public void IncorrectConstruction ()
 		{
 			var core = new Core();
-			var room = core.Mars.GetColony(0);
+			var colony = core.Mars.GetColony(0);
 
 			Assert.IsFalse(
 				new MapCreate(
-					room,
+					colony,
 					new Map(MapType.Empty)
 				)
 				.Execute(core)
@@ -62,7 +62,7 @@ namespace LogicTests
 
 			Assert.IsFalse(
 				new BuildingConstruct(
-					room.Map,
+					colony.Map,
 					new Building(BuildingType.Generator),
 					2
 				)
@@ -71,14 +71,14 @@ namespace LogicTests
 			);
 
 			new MapCreate(
-				room,
+				colony,
 				new Map(MapType.PowerPlant)
 			)
 			.Execute(core);
 
 			Assert.IsFalse(
 				new MapCreate(
-					room,
+					colony,
 					new Map(MapType.PowerPlant)
 				)
 				.Execute(core)
@@ -87,7 +87,7 @@ namespace LogicTests
 
 			Assert.IsFalse(
 				new BuildingConstruct(
-					room.Map,
+					colony.Map,
 					new Building(BuildingType.Generator),
 					1000001
 				)
