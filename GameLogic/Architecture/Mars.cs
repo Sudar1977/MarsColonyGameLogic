@@ -13,10 +13,10 @@ namespace GameLogic.Architecture
 			get { return colonies; }
 		}
 
-		public void CreateEmptyColony ()
+		public void CreateEmptyColony (Factory factory)
 		{
 			for (var i = 0; i < ColonyLimit; i++) {
-				colonies.Add(new Colony(i));
+				colonies.Add(new Colony(i, factory.CreateMap(MapType.Empty)));
 			}
 		}
 

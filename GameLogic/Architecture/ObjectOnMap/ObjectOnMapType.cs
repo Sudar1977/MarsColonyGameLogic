@@ -1,8 +1,9 @@
+using System.IO;
+
 namespace GameLogic.Architecture
 {
 	public enum ObjectOnMapType
 	{
-		Generator,//это было
 		//строения Buildings
 		AutominerMetallOre,
 		AutominerRareEarthOre,
@@ -26,7 +27,12 @@ namespace GameLogic.Architecture
 		//залежи ресурсов DepositRecources
 		DepositIce,
 		DepositMetallOre,
-		DepositRareEarthOre
+		DepositRareEarthOre,
+		//рудимент старого кода нужно убрать
+		Generator,
+		Furnace,
+		Digger,
+		Miner
+	};
 
-	}
 }

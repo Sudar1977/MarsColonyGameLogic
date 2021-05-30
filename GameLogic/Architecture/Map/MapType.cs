@@ -8,6 +8,9 @@ namespace GameLogic.Architecture
 		LandscapeFeatures,
 		DepositsResource,
 		Rovers,
-		PowerPlant //рудимент старого кода нужно убрать
+		//рудимент старого кода нужно убрать
+		PowerPlant,
+		Smeltery,
+		Roboport
 	}
 }

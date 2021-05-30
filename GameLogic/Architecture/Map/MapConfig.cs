@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameLogic.Architecture
 {
-    class MapConfig
+    public class MapConfig
     {
 
 		public MapType Type;

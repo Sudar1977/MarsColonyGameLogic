@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameLogic.Architecture
 {
-    class ObjectOnMapConfig
+    public class ObjectOnMapConfig
     {
-
+        public ObjectOnMapType Type;
     }
 }

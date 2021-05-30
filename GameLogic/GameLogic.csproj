@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Architecture\Factory.cs" />
     <Compile Include="Architecture\Map\MapConfig.cs" />
     <Compile Include="Architecture\Map\Map.cs" />
     <Compile Include="Architecture\Map\MapType.cs" />

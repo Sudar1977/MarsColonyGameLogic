@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "GameLogic.csproj", "{21603B3D-B664-46AE-B97C-3529BFF48079}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicTests", "..\LogicTests\LogicTests.csproj", "{F679C5C4-BFA8-4C7D-BFC6-7BFD93FFB404}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0765687D-56CD-4F75-B110-7C82D5CEB407}"
+	ProjectSection(SolutionItems) = preProject
+		..\!Doc\MarsColonyLogic2.docx = ..\!Doc\MarsColonyLogic2.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE5160AE-8111-4C8A-9DB4-74E014A9A3EE}
 	EndGlobalSection
 EndGlobal

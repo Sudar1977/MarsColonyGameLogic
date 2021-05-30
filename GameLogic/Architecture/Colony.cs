@@ -9,11 +9,11 @@ namespace GameLogic.Architecture
 		// каждая комната является пристанищем для строения
 		public Map Map { get; set; }
 
-		public Colony (int index)
+		public Colony (int index, Map map)
 		{
 			Index = index;
 			// и по-умолчанию - это пустое строение
-			Map = new Map(MapType.Empty);
+			Map = map;
 			//создадим карты???
 		}
 

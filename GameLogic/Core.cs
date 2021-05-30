@@ -11,10 +11,13 @@ namespace GameLogic
 		}
 
 		public readonly Mars Mars = new Mars();
+		public readonly Factory Factory = new Factory();
 
 		public Core ()
 		{
-			Mars.CreateEmptyColony();
+			// В аргумент метода передаем фабрику
+			Mars.CreateEmptyColony(Factory);
+			//Mars.CreateEmptyColony();
 		}
 	}
 }

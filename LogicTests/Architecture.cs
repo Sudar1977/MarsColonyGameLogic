@@ -21,7 +21,7 @@ namespace LogicTests
 			Assert.IsTrue(
 				new MapCreate(
 					colony,
-					new Map(MapType.PowerPlant)
+					core.Factory.CreateMap(MapType.PowerPlant)
 				)
 				.Execute(core)
 				.IsValid
@@ -33,7 +33,7 @@ namespace LogicTests
 			Assert.IsTrue(
 				new ObjectPlaceOnMap(
 					colony.Map,
-					new ObjectOnMap(ObjectOnMapType.Generator),
+					core.Factory.CreateObject(ObjectOnMapType.Generator),
 					2
 				)
 				.Execute(core)
@@ -54,7 +54,7 @@ namespace LogicTests
 			Assert.IsFalse(
 				new MapCreate(
 					colony,
-					new Map(MapType.Empty)
+					core.Factory.CreateMap(MapType.Empty)
 				)
 				.Execute(core)
 				.IsValid
@@ -63,7 +63,7 @@ namespace LogicTests
 			Assert.IsFalse(
 				new ObjectPlaceOnMap(
 					colony.Map,
-					new ObjectOnMap(ObjectOnMapType.Generator),
+					core.Factory.CreateObject(ObjectOnMapType.Generator),
 					2
 				)
 				.Execute(core)
@@ -72,14 +72,14 @@ namespace LogicTests
 
 			new MapCreate(
 				colony,
-				new Map(MapType.PowerPlant)
+				core.Factory.CreateMap(MapType.PowerPlant)
 			)
 			.Execute(core);
 
 			Assert.IsFalse(
 				new MapCreate(
 					colony,
-					new Map(MapType.PowerPlant)
+					core.Factory.CreateMap(MapType.PowerPlant)
 				)
 				.Execute(core)
 				.IsValid
@@ -88,7 +88,7 @@ namespace LogicTests
 			Assert.IsFalse(
 				new ObjectPlaceOnMap(
 					colony.Map,
-					new ObjectOnMap(ObjectOnMapType.Generator),
+					core.Factory.CreateObject(ObjectOnMapType.Generator),
 					1000001
 				)
 				.Execute(core)

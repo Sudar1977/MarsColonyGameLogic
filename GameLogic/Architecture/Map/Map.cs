@@ -7,7 +7,7 @@ namespace GameLogic.Architecture
 	{
 		// Ограничим количество модулей, которые можно поставить в строение
 		public readonly int ObjectsOnMapLimit = 1000000;
-
+		public readonly MapConfig Config;
 		public readonly MapType Type;
 
 		// Каждое здание имеет свою сообтвенную позицию
@@ -24,9 +24,12 @@ namespace GameLogic.Architecture
 			get { return objectsOnMap.Values; }
 		}
 
-		public Map (MapType type)
+		// В конструкторе принимаем конфиг, а не индекс
+		public Map (MapConfig config)
 		{
-			Type = type;
+			Type = config.Type;
+			ObjectsOnMapLimit = config.ObjectsOnMapLimit;
+			Config = config;
 		}
 
 		public ObjectOnMap GetObjectonMap (int position)
