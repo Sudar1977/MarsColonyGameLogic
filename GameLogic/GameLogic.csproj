@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Architecture\Factory.cs" />
+    <Compile Include="Architecture\Factory\Factory.cs" />
+    <Compile Include="Architecture\Factory\FactoryConfigMaps.cs" />
+    <Compile Include="Architecture\Factory\FactoryConfigObjectsOnMap.cs" />
     <Compile Include="Architecture\Map\MapConfig.cs" />
     <Compile Include="Architecture\Map\Map.cs" />
     <Compile Include="Architecture\Map\MapType.cs" />
