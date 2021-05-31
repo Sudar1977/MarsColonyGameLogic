@@ -72,7 +72,63 @@ namespace GameLogic.Architecture
 		    //залежи ресурсов DepositRecources
 		                    ObjectOnMapType.DepositIce,
                             ObjectOnMapType.DepositMetallOre,
-                            ObjectOnMapType.DepositRareEarthOre
+                            ObjectOnMapType.DepositRareEarthOre,
+		    //Особенности ландшафта
+		                    ObjectOnMapType.Crater,
+                            ObjectOnMapType.Rock
+                        }
+                    }
+                },
+                {
+                    MapType.Buildings, new MapConfig()
+                    {
+                        Type = MapType.Buildings,
+                        ObjectsOnMapLimit = 10000000,
+                        AvailableObjectsOnMap = new []
+                        {
+		    //строения Buildings
+		                    ObjectOnMapType.AutominerMetallOre,
+                            ObjectOnMapType.AutominerRareEarthOre,
+                            ObjectOnMapType.MiningComplex,
+                            ObjectOnMapType.ConcentratingFactory,
+                            ObjectOnMapType.SolarPanel,
+                            ObjectOnMapType.NuclearPlant,
+                            ObjectOnMapType.HeatGenerator,
+                            ObjectOnMapType.WaterRig,
+                            ObjectOnMapType.Greenhouse,
+                            ObjectOnMapType.Conservatory,
+                            ObjectOnMapType.HydroponicsFoodProduction,
+                            ObjectOnMapType.HydroponicsVegetableRawProduction,
+                            ObjectOnMapType.VacuumSmelter,
+                            ObjectOnMapType.ElectrrolysSmelter,
+                            ObjectOnMapType.ChemicalLaboratory,
+                            ObjectOnMapType.PolymerSyntesis,
+                        }
+                    }
+                },
+                {
+                    MapType.Rovers, new MapConfig()
+                    {
+                        Type = MapType.Rovers,
+                        ObjectsOnMapLimit = 10000000,
+                        AvailableObjectsOnMap = new []
+                        {
+		    //марсоходы Rover
+		                    ObjectOnMapType.RoverOnMetallOre,
+                            ObjectOnMapType.RoverOnRareEarthOre,
+                        }
+                    }
+                },
+                {
+                    MapType.LandscapeFeatures, new MapConfig()
+                    {
+                        Type = MapType.LandscapeFeatures,
+                        ObjectsOnMapLimit = 10000000,
+                        AvailableObjectsOnMap = new []
+                        {
+		    //Особенности ландшафта
+		                    ObjectOnMapType.Crater,
+                            ObjectOnMapType.Rock,
                         }
                     }
                 },
@@ -87,7 +143,6 @@ namespace GameLogic.Architecture
 		                    ObjectOnMapType.DepositIce,
                             ObjectOnMapType.DepositMetallOre,
                             ObjectOnMapType.DepositRareEarthOre
-
                         }
                     }
                 }

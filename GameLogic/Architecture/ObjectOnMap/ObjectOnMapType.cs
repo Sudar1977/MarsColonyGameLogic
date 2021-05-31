@@ -28,6 +28,9 @@ namespace GameLogic.Architecture
 		DepositIce,
 		DepositMetallOre,
 		DepositRareEarthOre,
+		//Особенности ландшафта
+		Rock,
+		Crater,
 		//рудимент старого кода нужно убрать
 		Generator,
 		Furnace,
