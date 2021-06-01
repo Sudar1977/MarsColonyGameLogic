@@ -56,10 +56,12 @@
     <Compile Include="Architecture\Mars.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Commands\MapCreate.cs" />
+    <Compile Include="Commands\NextTurn.cs" />
     <Compile Include="Commands\ObjectPlaceOnMap.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Pleer\ResourceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Turns.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

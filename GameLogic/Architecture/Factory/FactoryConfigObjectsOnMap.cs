@@ -34,7 +34,82 @@ namespace GameLogic.Architecture
                 {
                     Type = ObjectOnMapType.Miner
                 }
-            }
+            },
+		//строения Buildings
+            {
+                ObjectOnMapType.AutominerMetallOre, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.AutominerMetallOre
+                }
+            },
+            {
+                ObjectOnMapType.AutominerRareEarthOre, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.AutominerRareEarthOre
+                }
+            },
+            {
+                ObjectOnMapType.AutominerMetallOre, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.AutominerMetallOre
+                }
+            },
+            {
+                ObjectOnMapType.MiningComplex, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.MiningComplex
+                }
+            },
+            {
+                ObjectOnMapType.ConcentratingFactory, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.ConcentratingFactory
+                }
+            },
+            {
+                ObjectOnMapType.SolarPanel, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.SolarPanel
+                }
+            },
+            {
+                ObjectOnMapType.NuclearPlant, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.NuclearPlant
+                }
+            },
+            {
+                ObjectOnMapType.HeatGenerator, new ObjectOnMapConfig()
+                {
+                    Type = ObjectOnMapType.HeatGenerator
+                }
+            },        
+
+  //      ,
+  //      WaterRig,
+  //      Greenhouse,
+  //      Conservatory,
+  //      HydroponicsFoodProduction,
+  //      HydroponicsVegetableRawProduction,
+  //      VacuumSmelter,
+  //      ElectrrolysSmelter,
+  //      ChemicalLaboratory,
+  //      PolymerSyntesis,
+		////марсоходы Rover
+		//RoverOnMetallOre,
+  //      RoverOnRareEarthOre,
+		////залежи ресурсов DepositRecources
+		//DepositIce,
+  //      DepositMetallOre,
+  //      DepositRareEarthOre,
+		////Особенности ландшафта
+		//Rock,
+  //      Crater,
+
+
+
+
+
         };
 
 
